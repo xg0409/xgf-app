@@ -1,0 +1,22 @@
+div {
+  color: red;
+  font-size:20px;
+}
+
+body{
+  background-color: #ccc;
+  color:red;
+}div {
+  font-size: 40px;
+}
+.a-module .main {
+  font-size: 20px;
+}
+.img {
+  width: 333px;
+  height: 216px;
+  background: url(http://localhost:10086/public/activities/activities1/assets/su-product.png) 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+
+/*# sourceMappingURL=bundle.css.map*/

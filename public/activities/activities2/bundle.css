@@ -1,0 +1,12 @@
+div {
+  color: yellow;
+  font-size:20px;
+}
+body{
+  background-color: #ccc;
+  color:yellow;
+}.img {
+  background: url(http://localhost:10086/public/activities/activities2/assets/su-product2.png);
+}
+
+/*# sourceMappingURL=bundle.css.map*/

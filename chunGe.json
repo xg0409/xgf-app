@@ -1,0 +1,59 @@
+{
+  "options": {
+    "webpack": {
+      "entry": {
+        "home": [
+          "webpack-dev-server/client?http://localhost:3002",
+          "webpack/hot/only-dev-server",
+          "./projects/docs/home/index.js"
+        ]
+      },
+      "plugins": [{
+          "definitions": {
+            "$": "jquery",
+            "jQuery": "jquery",
+            "window.jQuery": "jquery"
+          }
+        }, {
+          "filename": "docs/[name]/bundle.css",
+          "options": {
+            "allChunks": true
+          },
+          "id": 1
+        },{
+          "definitions": {
+            "process.env.NODE_ENV": "\"development\"",
+            "process.env.BROWSER": "true"
+          }
+        }
+      ],
+      "output": {
+        "path": "/Users/xg/Documents/My_Workspace/jquery-sample/public",
+        "filename": "docs/[name]/bundle.js",
+        "publicPath": "http://localhost:3001/public/"
+      },
+      "externals": {
+        "jquery": "jQuery"
+      },
+      "stats": {},
+      "resolve": {
+        "extensions": [
+          "",
+          ".js"
+        ]
+      },
+      "devtool": "source-map"
+    },
+    "publicPath": "http://localhost:3001/public/"
+  },
+  "docs": {
+    "keepAlive": true,
+    "hot": true,
+    "historyApiFallback": true,
+    "host": "localhost",
+    "port": 3002,
+    "stats": {
+      "colors": true
+    }
+  }
+}
