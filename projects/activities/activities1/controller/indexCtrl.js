@@ -1,5 +1,3 @@
-
-$(function(){
-  console.log(222);
-  console.log(333);
-})
+app.controller('IndexCtrl', ['$scope', '$state', function ($scope, $state) {
+  $scope.name = "XG";
+}]);

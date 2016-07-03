@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="activities_activaites1">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!--以IE8模式渲染-->
+    <meta charset="UTF-8">
+    <meta name="apple-touch-fullscreen" content="YES"/>
+    <meta name="format-detection" content="telephone=no,email=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <title></title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0, maximum-scale=1.minimum-scale=1.0, user-scalable=no">
+
+</head>
+
+<body>
+<div class="container">
+    <div class="page" ui-view></div>
+</div>
+
+</body>
+<script type="application/javascript" src="/lib/angular.js"></script>
+<script type="application/javascript" src="/lib/angular-ui-router.js"></script>
+<link rel="stylesheet" type="text/css" href="http://localhost:10086/public/activities/activities1/bundle.css">
+<script type="text/javascript" src="http://localhost:10086/public/activities/activities1/bundle.js"></script>
+
+</html>

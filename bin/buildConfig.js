@@ -5,16 +5,16 @@ var _ = require('lodash');
 
 
 function getRenderParams(req, env) {
-  var options = config.options;
-  var projects = config.projects;
+  var options = _.clone(config.options);
+  var projects = _.clone(config.projects);
   var cssBundles = [];
   var jsBundles = [];
   var targetObject;
 
   var cdnRoot = (env == "production") ? options.assets.prod : options.assets.dev;
 
-  // var queryPath = req.path;
-  var queryPath = "/activities/activities1/";
+  var queryPath = req.originalUrl;
+  // var queryPath = "/activities/activities1/";
   Object.keys(projects).forEach(function (projectName) {
 
     var projectObject = projects[projectName];
@@ -23,8 +23,9 @@ function getRenderParams(req, env) {
       var urlMatch = value.match;
       if (urlMatch && urlMatch.test(queryPath)) {
         value._metaInfo = _.extend(_metaInfo, value._metaInfo);
+        projects.projectName = projectName;
+        projects.subProjectName = key;
         targetObject = value;
-        return;
       }
     });
   });
