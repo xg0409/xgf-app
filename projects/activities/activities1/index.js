@@ -12,6 +12,7 @@ window.app = angular.module('activities_activities1', [
 // }
 
 require('../../../shared/lib_angular/core');
+require('../../../shared/lib_angular/scroller');
 
 // share book controller
 require('./controller');

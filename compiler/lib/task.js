@@ -134,7 +134,7 @@ var initBuild = function (grunt) {
       }
     };
     grunt.config.set('webpack', webpack);
-    // grunt.task.run(['webpack:build-dev']);
+    grunt.task.run(['webpack:build-dev']);
   });
 
 
