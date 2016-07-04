@@ -1,7 +1,7 @@
 
 // The project name 'finance-activities'
 // Export global varible `app`; it's pre reserved keyword.
-window.app = angular.module('activities_activaites1', [
+window.app = angular.module('activities_activities1', [
   'ui.router'
 ]);
 

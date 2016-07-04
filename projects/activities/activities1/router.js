@@ -17,12 +17,12 @@
         .state('demo', {
           url: '/demo',
           controller: 'IndexCtrl',
-          templateUrl: 'demo1.html'
+          templateUrl: '/views/demo1.html'
         })
         .state('demo2', {
           url: '/demo2',
           controller: 'IndexCtrl',
-          templateUrl: 'demo2.html'
+          templateUrl: '/views/demo2.html'
         });
 
       $urlRouterProvider.otherwise('/demo');

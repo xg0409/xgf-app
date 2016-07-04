@@ -15,7 +15,7 @@ app.set('views', path.join(__dirname, '../projects/'));
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 app.use(express.static(path.join(__dirname, '../projects/')));
@@ -51,7 +51,6 @@ app.use('/', function (req, res) {
   });
   var projects = renderParams.projects || {};
   var angularModuleName = projects.projectName + '_' + projects.subProjectName;
-  console.log("angularModuleName", angularModuleName);
   var html = '<!DOCTYPE html>' +
     ' <html ng-app="' + angularModuleName + '">' +
     '  <head>' +
@@ -68,14 +67,7 @@ app.use('/', function (req, res) {
     stylesHtml +
     '</head>' +
     '  <body>' +
-    '  <!-- views will be injected here -->' +
-    '  <div class="page" ui-view></div>' +
-    '<script>' +
-    '  window.GLOBAL_APP_NAME = "app";' +
-    '  window.GLOBAL_ENV_NAME = "prod";' +
-    '  window.GLOBAL_DEBUG_MODE = true;' +
-    '  window.GLOBAL = {};' +
-    '</script>' +
+    '     <div class="page" ui-view ></div>' +
     scriptsHtml +
     '  </body>' +
     '</html>';
@@ -123,8 +115,7 @@ var server = app.listen(port, function () {
 function urlHandle(url) {
   if (!url) {
     return ""
-  }
-  ;
+  };
   if (url.indexOf("/") == 0) {
     return url.substring(1);
   }
