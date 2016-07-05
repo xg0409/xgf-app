@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 app.use(express.static(path.join(__dirname, '../projects/')));
-app.use(express.static(path.join(__dirname, '../public/')));
+
 var getRenderParams = require('./buildConfig');
 
 var cors = require('cors');
@@ -30,7 +30,7 @@ var _ = require('lodash');
 var router = require('./routes/router');
 var ajaxRouter = require('./routes/ajaxRouter');
 
-
+app.use('/public',express.static(path.join(__dirname, '../public/')));
 app.use('/api', cors(), ajaxRouter);
 
 app.use('/', function (req, res) {

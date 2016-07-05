@@ -31,7 +31,8 @@ module.exports = {
         match: /^\/activities\/activities1(\/)$/,
         entry: './projects/activities/activities1/index.js',
         jsBundles: [
-          'http://js.40017.cn/jinrong/common/scripts/angular/vendor.js',
+          'http://localhost:8090/public/lib/angular.js',
+          'http://localhost:8090/public/lib/angular-ui-router.js',
           'activities/activities1/bundle.js?${version}'
         ],
         cssBundles: [
